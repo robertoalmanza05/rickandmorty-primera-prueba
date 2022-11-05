@@ -15,19 +15,10 @@ const PagesIndex = () => {
   return (
     <div className={styles.container}>
       <div>
-        <h1>personajes:{info.count} </h1>
-        <h1>pagina:{page} </h1>
+        <h2 className={styles.h2}>personajes:{info.count} </h2>
+        <h2 className={styles.h2}>pagina:{page} </h2>
       </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'initial',
-          flexWrap: 'wrap',
-          height: '100%',
-          overflow: 'auto',
-          maxHeight: '100%'
-        }}
-      >
+      <div className={styles.divimg}>
         {results.map((character) => {
           const { name, image, id } = character;
           return (
