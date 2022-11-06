@@ -1,6 +1,7 @@
 import styles from './index.module.css';
 import { Children, useEffect, useState } from 'react';
 import ButtonComponent from '../components/Button';
+import NavBar from '../components/navBar';
 import useFetchData from '../hooks/useFetchData';
 import Link from 'next/link';
 
@@ -18,6 +19,7 @@ const PagesIndex = () => {
         <h2 className={styles.h2}>personajes:{info.count} </h2>
         <h2 className={styles.h2}>pagina:{page} </h2>
       </div>
+      <NavBar />
       <div className={styles.divimg}>
         {results.map((character) => {
           const { name, image, id } = character;

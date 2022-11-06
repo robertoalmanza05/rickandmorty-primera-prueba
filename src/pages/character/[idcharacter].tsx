@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import NavBar from '../../components/navBar';
 
 type Props = {
   name: string;
@@ -14,6 +15,9 @@ const Post = (props: Props) => {
 
   return (
     <div>
+      <div>
+        <NavBar />
+      </div>
       <h1>name: {idcharacter}</h1>
       <h2>sdsad</h2>
     </div>
