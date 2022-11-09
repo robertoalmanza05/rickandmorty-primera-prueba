@@ -1,0 +1,10 @@
+iniciar el proyecto:
+npm init
+
+agregar next react and doom:
+
+yarn add next react react-dom
+
+Cambiar de js a typescript:
+
+yarn add -D typescript.
