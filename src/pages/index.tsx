@@ -11,8 +11,6 @@ const PagesIndex = () => {
 
   const { info, results } = useFetchData({ page: page });
 
-  console.log('results', results);
-  console.log('info', info);
   return (
     <div className={styles.container}>
       <div>
@@ -27,7 +25,7 @@ const PagesIndex = () => {
             <div>
               <img src={`${image}`} className={styles.img} />
               <h1 className={styles.h1}>
-                <Link href={`/character/${name}`}>{name}</Link>
+                <Link href={`/character/${id}`}>{name}</Link>
               </h1>
             </div>
           );
