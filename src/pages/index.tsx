@@ -13,11 +13,11 @@ const PagesIndex = () => {
 
   return (
     <div className={styles.container}>
+      <NavBar />
       <div>
         <h2 className={styles.h2}>personajes:{info.count} </h2>
-        <h2 className={styles.h2}>pagina:{page} </h2>
       </div>
-      <NavBar />
+
       <div className={styles.divimg}>
         {results.map((character) => {
           const { name, image, id } = character;
@@ -38,6 +38,7 @@ const PagesIndex = () => {
       >
         atras
       </ButtonComponent>
+      <span className={styles.h2}> pagina:{page}</span>
       <ButtonComponent
         onClick={() => {
           setPage(Math.min(page + 1, info.pages));

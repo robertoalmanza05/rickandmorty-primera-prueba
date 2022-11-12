@@ -47,3 +47,8 @@
   justify-content: center;
   gap: 0.5rem;
 }
+.h11 {
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+}
