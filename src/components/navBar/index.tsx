@@ -33,7 +33,7 @@ const NavBar = (props: Props) => {
               className={styles.nav__linkslink}
               href={`/character/${Math.floor(Math.random() * info.count)}`}
             >
-              Personaje random 2
+              Personaje random
             </Link>
           </li>
           <li>
