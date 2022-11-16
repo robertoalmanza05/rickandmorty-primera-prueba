@@ -14,7 +14,7 @@ const PagesIndex = () => {
   return (
     <div className={styles.container}>
       <NavBar />
-      <div>
+      <div className={styles.div}>
         <h2 className={styles.h2}>personajes:{info.count} </h2>
       </div>
 
@@ -38,7 +38,9 @@ const PagesIndex = () => {
       >
         atras
       </ButtonComponent>
-      <span className={styles.h2}> pagina:{page}</span>
+      <div className={styles.div}>
+        <span className={styles.h2}> pagina:{page}</span>
+      </div>
       <ButtonComponent
         onClick={() => {
           setPage(Math.min(page + 1, info.pages));
