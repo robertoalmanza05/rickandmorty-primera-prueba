@@ -14,13 +14,13 @@ const NavBar = (props: Props) => {
 
   return (
     <header className={styles.header}>
-      <a className={styles.logo} href="/">
+      <Link className={styles.logo} href="/">
         <img
           src="https://media.cdn.adultswim.com/uploads/20210914/219141616186-1910281358343-RAM.jpg"
           className={styles.img}
         />
-      </a>
-      <nav>
+      </Link>
+      <nav className={styles.nav}>
         <ul className={styles.nav__links}>
           <li>
             <Link className={styles.nav__linkslink} href={`/`}>
@@ -33,7 +33,7 @@ const NavBar = (props: Props) => {
               className={styles.nav__linkslink}
               href={`/character/${Math.floor(Math.random() * info.count)}`}
             >
-              Personaje random
+              Personaje random 2
             </Link>
           </li>
           <li>
@@ -54,10 +54,6 @@ const NavBar = (props: Props) => {
           </li>
         </ul>
       </nav>
-      <a className={styles.cta} href="/character/5">
-        Contact
-      </a>
-      <p className={styles.menu}>Menu</p>
     </header>
   );
 };
