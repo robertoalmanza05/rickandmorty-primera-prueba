@@ -27,15 +27,7 @@ const Post = (props: Props) => {
         <h1>{result.location?.name}</h1>
       </div>
       <div>
-        <img
-          src={`${result.image}`}
-          style={{
-            width: '320px',
-            height: '320px',
-            display: 'flex',
-            marginLeft: '30px'
-          }}
-        ></img>
+        <img src={`${result.image}`}></img>
       </div>
     </>
   );

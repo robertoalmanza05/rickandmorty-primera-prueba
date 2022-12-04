@@ -9,10 +9,10 @@
   align-items: flex-end;
   padding: 5px;
   gap: 10px;
-  background-color: #0a4712;
+  background-image: url(../../../img/bolivia.jpg);
   justify-content: center;
-
   flex-direction: row;
+  border-bottom: rgb(221, 43, 129) ridge;
 }
 .logo {
   cursor: pointer;
