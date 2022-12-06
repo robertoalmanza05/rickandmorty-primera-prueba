@@ -1,7 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
 .h1 {
   font-size: 19.5px;
   background-color: rgb(243, 145, 56);
-  position: relative;
   top: 5px;
   text-align: center;
   margin-top: -5px;
@@ -34,7 +38,6 @@
 }
 .divimg {
   display: flex;
-  flex-direction: initial;
   flex-wrap: wrap;
   justify-content: center;
   margin-right: 200px;
