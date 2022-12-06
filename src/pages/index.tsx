@@ -24,7 +24,10 @@ const PagesIndex = () => {
             const { name, image, id } = character;
             return (
               <div>
-                <img src={`${image}`} className={styles.img} />
+                <Link href={`/character/${id}`}>
+                  <img src={`${image}`} className={styles.img}></img>
+                </Link>
+
                 <h1 className={styles.h1}>
                   <Link href={`/character/${id}`}>{name}</Link>
                 </h1>

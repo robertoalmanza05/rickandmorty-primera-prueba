@@ -2,19 +2,16 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border-left: rgb(23, 21, 153) solid;
 }
 .h1 {
-  font-size: 19px;
-  background-color: aliceblue;
+  font-size: 19.5px;
+  background-color: rgb(243, 145, 56);
   position: relative;
   top: 5px;
-  left: 3px;
-  right: 100px;
-  margin-top: 1px;
-  margin-left: 5px;
-  border-radius: 9px;
   text-align: center;
+  margin-top: -5px;
+  margin-left: 5px;
+  border-radius: px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .h2 {
@@ -28,13 +25,13 @@
   border-radius: 10px;
 }
 .img {
-  margin-top: 3px;
-  width: 250px;
-  height: 200px;
+  width: 280px;
+  height: 220px;
   display: flex;
-  margin-left: 30px;
-  border-radius: 50px;
-  margin-bottom: 25px;
+  border-radius: 35px;
+  margin-bottom: 8px;
+  justify-items: center;
+  border: 5px rgb(249, 171, 71) solid;
 }
 .ln {
   text-align: center;
@@ -44,15 +41,12 @@
   display: flex;
   flex-direction: initial;
   flex-wrap: wrap;
-  height: 100%;
-  max-height: 100%;
   justify-content: center;
-  margin-right: 50px;
-  margin-top: 1px;
-  margin-left: 10px;
-  gap: 40px;
-
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: 10px;
   margin-bottom: 30px;
+  gap: 30px;
 }
 .h11 {
   display: flex;

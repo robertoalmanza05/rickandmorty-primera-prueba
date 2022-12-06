@@ -19,14 +19,27 @@ const Post = (props: Props) => {
         <div>
           <NavBar />
         </div>
-        <h1>name: {result.name}</h1>
+        <h1
+          style={{
+            display: 'flex',
+            fontSize: '30px',
+            justifyContent: 'center'
+          }}
+        >
+          Name: {result.name}
+        </h1>
       </div>
       <div>
         <h1 className={styles.h11}> a {result?.species}</h1>
         <h1>{result.status}</h1>
         <h1>{result.location?.name}</h1>
       </div>
-      <div>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center'
+        }}
+      >
         <img src={`${result.image}`}></img>
       </div>
     </>
