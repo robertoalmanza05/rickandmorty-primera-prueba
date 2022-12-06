@@ -9,10 +9,12 @@ const ButtonComponent = (props: Props) => {
   return (
     <button
       style={{
-        fontSize: '15px',
+        fontSize: '20px',
+        width: '200px',
         borderRadius: '5px',
         cursor: 'pointer',
-
+        display: 'flex',
+        justifyContent: 'center',
         padding: '10px 3px',
         textAlign: 'center'
       }}
