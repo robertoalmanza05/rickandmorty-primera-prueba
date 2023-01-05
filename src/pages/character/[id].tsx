@@ -17,6 +17,8 @@ const Post = (props: Props) => {
 
   useEffect(() => {
   setPalabra("")
+
+  
   
     
   }, [router.asPath])
