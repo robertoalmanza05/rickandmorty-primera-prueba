@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { resourceLimits } from 'worker_threads';
 import NavBar from '../../components/navBar';
 import useFetchCharacter from '../../hooks/useFetchCharacter';
 import styles from '../../pages/index.module.css';
@@ -12,27 +13,36 @@ const Post = (props: Props) => {
   const router = useRouter();
   const { id } = props;
   const { result } = useFetchCharacter({ id: router.query?.id as string });
+  
+
+  useEffect(() => {
+  setPalabra("")
+  
+    
+  }, [router.asPath])
+  
+
+  const [palabra, setPalabra] = useState("");
+  
+  const onChangeEvent = function (evento) {
+    setPalabra(evento.target.value);
+    console.log(evento.target.value);
+  };
 
   return (
     <>
       <div>
-        <div>
-          <NavBar />
-        </div>
-        <h1
-          style={{
-            display: 'flex',
-            fontSize: '30px',
-            justifyContent: 'center'
-          }}
-        >
-          Name: {result.name}
-        </h1>
-      </div>
-      <div>
-        <h1 className={styles.h11}> a {result?.species}</h1>
-        <h1>{result.status}</h1>
-        <h1>{result.location?.name}</h1>
+        <NavBar />
+        <br />
+        <input value={palabra} onChange={onChangeEvent} className={styles.h11} />
+        
+        <h1 className={styles.h11}>{palabra}</h1>
+
+        <h1 className={styles.h11}>{result.name} </h1>
+        <h1 className={styles.h11}>{result.species} </h1>
+        <h1 className={styles.h11}>{result.type}</h1>
+
+        <h1 className={styles.h11}>{result.location?.name}</h1>
       </div>
       <div
         style={{

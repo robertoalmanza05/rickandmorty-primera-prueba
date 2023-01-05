@@ -8,15 +8,18 @@ import Link from 'next/link';
 const PagesIndex = () => {
   const [count, setCount] = useState(0);
   const [page, setPage] = useState(1);
+  
 
   const { info, results } = useFetchData({ page: page });
 
   return (
     <div>
       <NavBar />
+   
       <div className={styles.container}>
         <div className={styles.div}>
           <h2 className={styles.h2}>personajes:{info.count} </h2>
+
         </div>
 
         <div className={styles.divimg}>
@@ -53,6 +56,7 @@ const PagesIndex = () => {
           }}
         >
           siguiente
+          
         </ButtonComponent>
       </div>
     </div>

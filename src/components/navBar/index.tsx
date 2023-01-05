@@ -1,4 +1,6 @@
+import RenderResult from 'next/dist/server/render-result';
 import Link from 'next/link';
+import { useState } from 'react';
 import useFetchData from '../../hooks/useFetchData';
 import styles from './index.module.css';
 
@@ -8,9 +10,16 @@ type Props = {
   onClick?: () => void;
 };
 
+
 const NavBar = (props: Props) => {
   const { children, onClick } = props;
   const { info } = useFetchData({});
+
+
+  let randomCaracter = Math.floor(Math.random() * info.count)
+
+
+  
 
   return (
     <header className={styles.header}>
@@ -31,7 +40,8 @@ const NavBar = (props: Props) => {
           <li>
             <Link
               className={styles.nav__linkslink}
-              href={`/character/${Math.floor(Math.random() * info.count)}`}
+              href={`/character/${randomCaracter}`}
+            
             >
               Personaje random 2
             </Link>
@@ -39,7 +49,7 @@ const NavBar = (props: Props) => {
           <li>
             <Link
               className={styles.nav__linkslink}
-              href={`/character/${Math.floor(Math.random() * info.count)}`}
+              href={`/character/${randomCaracter}`}
             >
               Personaje random 3
             </Link>
@@ -47,7 +57,7 @@ const NavBar = (props: Props) => {
           <li>
             <Link
               className={styles.nav__linkslink}
-              href={`/character/${Math.floor(Math.random() * info.count)}`}
+              href={`/character/${randomCaracter}`}
             >
               Personaje random 4
             </Link>
