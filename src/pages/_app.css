@@ -18,7 +18,7 @@ html {
 body {
   width: 100%;
   display: flex;
-  background-image: url(../../img/bolivia.jpg);
+  background-image: url(/img/bolivia.jpg);
 }
 #__next {
   width: 100%;
