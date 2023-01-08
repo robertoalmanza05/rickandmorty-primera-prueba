@@ -35,6 +35,7 @@ const Post = (props: Props) => {
  link.download= 'meme.png'
  link.href= img;
 link.click();
+console.log(link);
 
     });
   }
