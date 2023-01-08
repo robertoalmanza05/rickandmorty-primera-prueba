@@ -19,7 +19,7 @@ const Post = (props: Props) => {
   
 
   useEffect(() => {
-  setPalabra("pendejo")
+  setPalabra("")
 
   
   
@@ -40,7 +40,7 @@ console.log(link);
     });
   }
 
-  const [palabra, setPalabra] = useState("x");
+  const [palabra, setPalabra] = useState("");
   
   const onChangeEvent = function (evento) {
     setPalabra(evento.target.value);
@@ -52,7 +52,7 @@ console.log(link);
       <div>
         <NavBar />
         <br />
-        <input onChange={onChangeEvent} className={styles.h11} />
+        <input value= {palabra} onChange={onChangeEvent} className={styles.h11} />
         
         <h1 className={styles.h11}>{palabra}</h1>
 
