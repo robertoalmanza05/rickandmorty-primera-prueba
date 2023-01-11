@@ -84,7 +84,14 @@ style={{
 
 
 <input type="file" multiple accept="image/*" onChange={onImageChange} />
-{imagesURLs.map(imageSrc => <img src={imageSrc} />)}
+{imagesURLs.map(imageSrc => <img style={{
+width:'400px',
+height:'400px',
+borderRadius:'100px',
+borderStyle:'solid',
+borderColor:'green'
+
+}} src={imageSrc} />)}
 </div>
     )
 }
