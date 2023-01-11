@@ -1,5 +1,5 @@
 import { display } from 'html2canvas/dist/types/css/property-descriptors/display';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import NavBar from '../../components/navBar';
 
 export default function Index() {
@@ -16,7 +16,22 @@ const onchangeCounterMayor= function(){
 const onReset= function(){
   setContador(x)
 }
+const [images, setImages]= useState([])
+const [imagesURLs, setImageURLs]= useState([])
 
+const onImageChange=function(e){
+setImages([...e.target.files]);
+
+
+}
+
+useEffect(() => {
+  if(images.length<1) return;
+  const newImageUrls =[];
+  images.forEach(image => newImageUrls.push(URL.createObjectURL(image)));
+  setImageURLs(newImageUrls);
+
+}, [images]);
 
   return (
 
@@ -67,6 +82,9 @@ style={{
   }
 } onClick={onReset}>Reset</button>
 
+
+<input type="file" multiple accept="image/*" onChange={onImageChange} />
+{imagesURLs.map(imageSrc => <img src={imageSrc} />)}
 </div>
     )
 }
