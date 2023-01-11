@@ -57,7 +57,7 @@ const NavBar = (props: Props) => {
           <li>
             <Link
               className={styles.nav__linkslink}
-              href={`/character/${randomCaracter}`}
+              href={`/nada/`}
             >
               Personaje random 4
             </Link>
