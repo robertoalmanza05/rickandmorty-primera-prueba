@@ -16,7 +16,16 @@ const Post = (props: Props) => {
   const router = useRouter();
   const { id } = props;
   const { result } = useFetchCharacter({ id: router.query?.id as string });
+  const [selectedFile, setSelectedFile] = useState(null);
+  let imageSrc = selectedFile ? URL.createObjectURL(selectedFile) : null;
+
+  useEffect(() => {
+    return () => {
+      URL.revokeObjectURL(imageSrc);
+    }
+  }, [imageSrc])
   
+
 
   useEffect(() => {
   setPalabra("")
@@ -83,14 +92,15 @@ console.log(link);
         display: 'flex',
         justifyContent: 'center',
         width: '300px',
-        height:'300px'
+        height:'300px',
 
       }} 
-      id= "aaaaa"src ="/img/1.png"/>  
+      id= "aaaaa"src = {imageSrc} />  
       
          
       </div>
-      <button onClick={onclickFuncion}>xadAADSAD</button>
+      <button onClick={onclickFuncion}>AAAA</button>
+      <input type="file" onChange={event => setSelectedFile(event.target.files[0])}></input>
       <div>
       </div>
     </>
