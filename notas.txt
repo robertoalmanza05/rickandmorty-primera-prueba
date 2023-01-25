@@ -1,3 +1,4 @@
 de la pagina principal envio el id del personaje a la nueva pagina.
 en la pagina generada con el id recibido, se lo envio al hook para poder leer la info del personaje.
 
+xd
