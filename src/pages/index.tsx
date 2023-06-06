@@ -30,7 +30,7 @@ const PagesIndex = () => {
                 <Link href={`/character/${id}`}>
                   <img src={`${image}`} className={styles.img}></img>
                 </Link>
-
+<h2 style={{fontSize:"40px",color:"green"}}>xd</h2>
                 <h1 className={styles.h1}>
                   <Link href={`/character/${id}`}>{name}</Link>
                 </h1>
