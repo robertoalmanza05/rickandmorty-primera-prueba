@@ -14,8 +14,9 @@ const PagesIndex = () => {
 
   return (
     <div>
+      
       <NavBar />
-   
+      <h1>hola</h1>
       <div className={styles.container}>
         <div className={styles.div}>
           <h2 className={styles.h2}>personajes:{info.count} </h2>
