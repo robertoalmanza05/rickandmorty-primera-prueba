@@ -16,7 +16,7 @@ const PagesIndex = () => {
     <div>
       
       <NavBar />
-      <h1>hola</h1>
+      <h1 style={{fontSize:"40px", color:"blue"}}>hola</h1>
       <div className={styles.container}>
         <div className={styles.div}>
           <h2 className={styles.h2}>personajes:{info.count} </h2>
